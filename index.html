@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSIC - Hsinchu G6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="index">
+    <audio autoplay loop id="audioelement" src="audio/004.mp3"></audio>
+    <img src="img/cloud.jpg" alt="" class="cloud">
+    <img src="img/star.gif" alt="" class="star">
+    <img src="img/school.gif" alt="" class="school">
+    <img src="img/earth.png" alt="" class="earth">
+    <img src="img/title-slogan.jpg" alt="" class="title-slogan">
+    <img src="img/title-school.png" alt="" class="title-school">
+    <a href="photos.html" class="hover_opacity">
+        <img src="img/btn-photo_B.png" alt="" class="b">
+        <img src="img/btn-photo_A.png" alt="" class="a">
+    </a>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            setInterval("toggleSound()", 1);
+        }
+        function toggleSound() {
+            var music = document.getElementById("audioelement");//獲取ID  
+            if (music.paused) { //判讀是否播放  
+                music.paused = false;
+                music.play(); //沒有就播放 
+            }
+        }
+    </script>
+    <script src="all.js"></script>
+</body>
+</html>
